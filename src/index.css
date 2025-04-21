@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -223,3 +222,17 @@
     }
   }
 }
+
+@layer utilities {
+  /* Add shimmer/twinkle animation for Refresh icon */
+  @keyframes twinkle-shimmer {
+    0%,100% { filter: drop-shadow(0 0 0px #fff8); opacity: 1; }
+    60% { filter: drop-shadow(0 0 14px #fff) brightness(1.38); opacity: 0.97; }
+    80% { opacity: 0.8; }
+  }
+  .animate-twinkle-shimmer {
+    animation: twinkle-shimmer 0.95s ease-in-out;
+  }
+}
+
+/* Add any specific extra spacing tweaks for the new dashboard layout */

@@ -1,4 +1,3 @@
-
 import { Layout } from "@/components/layout/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -87,31 +86,36 @@ const Index = () => {
   
   return (
     <Layout>
-      <div className="wellness-container">
+      <div className="wellness-container pt-8">
         {/* Daily Motivation - Glassmorphism Card */}
-        <Card className="mb-8 bg-opacity-20 backdrop-blur-lg bg-card/30 dark:bg-card/20 border-border/50 dark:border-white/10 shadow-lg animate-fade-in overflow-hidden">
-          <CardContent className="p-6 flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <Sparkles className="h-5 w-5 text-primary animate-pulse-glow" />
-              <blockquote className="text-xl italic text-foreground/90 dark:text-foreground/95">
-                "{quote}"
-              </blockquote>
-            </div>
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              onClick={refreshQuote} 
-              className="text-foreground/70 hover:text-foreground"
+        <div className="mx-auto max-w-2xl mb-8 px-4 z-30">
+          <div className="relative bg-white/10 dark:bg-white/10 backdrop-blur-lg border border-white/15 shadow-2xl rounded-2xl transition-all duration-500 animate-fade-in flex items-center gap-2 w-full py-3 px-6"
+            style={{ boxShadow: "0 2px 32px 0 rgba(110,162,217,0.14), 0 0 0 1px #fff1" }}
+          >
+            <span className="inline-flex justify-center items-center p-2 rounded-full bg-primary/30 shadow-sm ring-2 ring-white/10 mr-3">
+              <Sparkles className="h-5 w-5 text-primary animate-pulse-glow drop-shadow-[0_0_8px_rgba(131,186,255,0.62)]" />
+            </span>
+            <blockquote className="text-lg md:text-xl font-medium text-white/95 dark:text-white/95 italic flex-1 transition">
+              "{quote}"
+            </blockquote>
+            <Button
+              variant="ghost"
+              size="icon"
+              aria-label="New Quote"
+              onClick={refreshQuote}
+              className="group text-primary/80 hover:text-primary/100 relative ml-2 rounded-full"
             >
-              <RefreshCw className="h-4 w-4" />
+              <span className="absolute -inset-2 rounded-full bg-white/5 opacity-0 group-hover:opacity-100 transition" />
+              <RefreshCw className="h-5 w-5 animate-none group-hover:animate-twinkle-shimmer" />
             </Button>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
         
         {/* Main Dashboard Grid - Using glassmorphism */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
           {/* Sleep Card */}
-          <Card className="bg-opacity-20 backdrop-blur-lg bg-card/30 dark:bg-card/20 border-border/50 dark:border-white/10 shadow-sm">
+          <div className="bg-white/12 dark:bg-white/14 backdrop-blur-lg border border-white/15 rounded-2xl shadow-xl shadow-primary/10 hover:shadow-2xl transition-all duration-400 card-wellness flex flex-col"
+            style={{ boxShadow: "0 6px 36px 0 rgba(105,160,255,0.07), 0 0 0 1px #fff2" }}>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-lg font-medium">Sleep</CardTitle>
               <Link to="/sleep">
@@ -141,10 +145,11 @@ const Index = () => {
                 Weekly average: {sleepData.average}h
               </div>
             </CardContent>
-          </Card>
+          </div>
           
           {/* Water Card */}
-          <Card className="bg-opacity-20 backdrop-blur-lg bg-card/30 dark:bg-card/20 border-border/50 dark:border-white/10 shadow-sm">
+          <div className="bg-white/12 dark:bg-white/14 backdrop-blur-lg border border-white/15 rounded-2xl shadow-xl shadow-sky-300/12 hover:shadow-2xl transition-all duration-400 card-wellness flex flex-col"
+            style={{ boxShadow: "0 6px 36px 0 rgba(45,165,218,0.08), 0 0 0 1px #fff2" }}>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-lg font-medium">Water Intake</CardTitle>
               <Link to="/water">
@@ -180,10 +185,11 @@ const Index = () => {
                 </div>
               </div>
             </CardContent>
-          </Card>
+          </div>
           
           {/* Exercise Card */}
-          <Card className="bg-opacity-20 backdrop-blur-lg bg-card/30 dark:bg-card/20 border-border/50 dark:border-white/10 shadow-sm">
+          <div className="bg-white/12 dark:bg-white/14 backdrop-blur-lg border border-white/15 rounded-2xl shadow-xl shadow-primary/12 hover:shadow-2xl transition-all duration-400 card-wellness flex flex-col"
+            style={{ boxShadow: "0 6px 36px 0 rgba(95,155,218,0.10), 0 0 0 1px #fff2" }}>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-lg font-medium">Daily Exercise</CardTitle>
               <Link to="/exercise">
@@ -221,10 +227,11 @@ const Index = () => {
                 </div>
               </div>
             </CardContent>
-          </Card>
+          </div>
 
           {/* New Card: Mood Tracker */}
-          <Card className="bg-opacity-20 backdrop-blur-lg bg-card/30 dark:bg-card/20 border-border/50 dark:border-white/10 shadow-sm">
+          <div className="bg-white/10 dark:bg-white/10 backdrop-blur-lg border border-white/15 rounded-2xl shadow-lg hover:shadow-blue-600/20 transition-all duration-400 card-wellness flex flex-col"
+            style={{ boxShadow: "0 4px 28px 0 rgba(77,146,255,0.07), 0 0 0 1px #fff1" }}>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-lg font-medium">Today's Mood</CardTitle>
               <span className="text-xs text-muted-foreground">
@@ -256,10 +263,11 @@ const Index = () => {
                 )}
               </div>
             </CardContent>
-          </Card>
+          </div>
 
           {/* New Card: Goal Streak */}
-          <Card className="bg-opacity-20 backdrop-blur-lg bg-card/30 dark:bg-card/20 border-border/50 dark:border-white/10 shadow-sm">
+          <div className="bg-white/12 dark:bg-white/14 backdrop-blur-lg border border-white/15 rounded-2xl shadow-xl shadow-primary/10 hover:shadow-2xl transition-all duration-400 card-wellness flex flex-col"
+            style={{ boxShadow: "0 4px 24px 0 rgba(118,151,255,0.08), 0 0 0 1px #fff2" }}>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-lg font-medium">Goal Streak</CardTitle>
               <Calendar className="h-5 w-5 text-muted-foreground" />
@@ -290,10 +298,11 @@ const Index = () => {
                 </div>
               </div>
             </CardContent>
-          </Card>
+          </div>
 
           {/* New Card: Weather Widget */}
-          <Card className="bg-opacity-20 backdrop-blur-lg bg-card/30 dark:bg-card/20 border-border/50 dark:border-white/10 shadow-sm">
+          <div className="bg-white/9 dark:bg-white/13 backdrop-blur-lg border border-white/15 rounded-2xl shadow-xl shadow-blue-200/15 hover:shadow-2xl transition-all duration-400 card-wellness flex flex-col"
+            style={{ boxShadow: "0 2px 18px 0 rgba(83,137,255,0.09), 0 0 0 1px #fff2" }}>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-lg font-medium">Weather</CardTitle>
               <span className="text-xs text-muted-foreground">
@@ -313,7 +322,7 @@ const Index = () => {
                 </div>
               </div>
             </CardContent>
-          </Card>
+          </div>
         </div>
       </div>
     </Layout>
