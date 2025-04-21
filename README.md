@@ -1,73 +1,59 @@
-# Welcome to your Lovable project
+# 🌌 Wellness Tracker – Your Daily Fitness & Wellness Companion
 
-## Project info
+Welcome to **Wellness Tracker**, a beautifully crafted web app designed to help users build better habits through sleep tracking, water intake logging, exercise tracking, and daily motivation — all set against a calming **animated night sky** backdrop.
 
-**URL**: https://lovable.dev/projects/c0169b82-8d52-453b-aa35-cc82c872afb9
+---
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+- 🌙 **Dark Mode with Animated Night Sky**
+  - Twinkling stars and soft space vibes for a relaxing user experience
+  - Glassmorphism UI ensures background remains visible
 
-**Use Lovable**
+- 💤 **Sleep Tracking**
+  - Logs nightly sleep hours
+  - Weekly averages visualized with bar graphs
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c0169b82-8d52-453b-aa35-cc82c872afb9) and start prompting.
+- 💧 **Water Intake Tracker**
+  - Tracks daily progress toward hydration goals
+  - Interactive cup counter with progress ring
 
-Changes made via Lovable will be committed automatically to this repo.
+- 💪 **Exercise Checklist**
+  - Customizable daily workout tasks
+  - Auto-progress bar with completion feedback
 
-**Use your preferred IDE**
+- ✨ **Daily Motivation**
+  - Auto-generated inspirational quotes
+  - “Refresh” button to generate a new quote instantly
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- 😊 **Mood Logger**
+  - Lets users track their mood for the day
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- 📆 **Goal Streak Tracker**
+  - Visual streaks for sleep, water, and exercise milestones
 
-Follow these steps:
+- 🌤️ **Weather Widget**
+  - Matches sky theme and offers basic weather info
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- 📱 **Responsive Design**
+  - Optimized for mobile, tablet, and desktop
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🧠 Tech Stack
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+- **Frontend:** HTML, CSS, JavaScript
+- **Design System:** Tailwind CSS (with glassmorphism effects)
+- **Framework (Optional):** React (if applicable)
+- **Animation:** CSS keyframes / JavaScript + SVG (for star effects)
+- **Data Storage:** LocalStorage (for mock persistence)
+
+---
+
+## 🚀 Getting Started
+
+```bash
+git clone https://github.com/skills-beep/wellness-tracker.git
+cd wellness-tracker
+npm install
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/c0169b82-8d52-453b-aa35-cc82c872afb9) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
