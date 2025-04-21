@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -68,6 +69,7 @@ export default {
 						DEFAULT: '#292F45',
 						purple: '#3D3762'
 					}
+				}, // Added the missing comma here
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
