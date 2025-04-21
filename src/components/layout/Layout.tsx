@@ -14,8 +14,8 @@ export function Layout({ children }: LayoutProps) {
     <ThemeProvider defaultTheme="light">
       <div className="min-h-screen flex flex-col">
         <Navbar />
-        <main className="flex-1 pb-12">
-          <NightSky />
+        <NightSky />
+        <main className="flex-1 pb-12 relative z-10">
           {children}
         </main>
       </div>

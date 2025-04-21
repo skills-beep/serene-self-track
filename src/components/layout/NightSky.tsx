@@ -35,9 +35,6 @@ const NightSky = () => {
       if (timeout) clearTimeout(timeout);
     };
   }, [theme]);
-  
-  if (theme !== "dark") return null;
-  // Hide in light mode
 
   return (
     <div className="night-sky-bg pointer-events-none fixed inset-0 -z-10 transition-opacity duration-700 dark:opacity-100 opacity-0">
