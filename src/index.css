@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -233,9 +234,8 @@
   .animate-twinkle-shimmer {
     animation: twinkle-shimmer 0.95s ease-in-out;
   }
-}
 
-/* Add any specific extra spacing tweaks for the new dashboard layout */
+  /* Add any specific extra spacing tweaks for the new dashboard layout */
   .glass-morphism {
     @apply backdrop-blur-xl bg-white/10 border border-white/20 rounded-xl shadow-[0_6px_32px_-10px_rgba(120,135,255,0.23),0_1.5px_12px_0_rgba(19,44,87,0.11)] transition-all;
   }
@@ -260,15 +260,4 @@
   .animate-twinkle-shimmer {
     animation: twinkle-shimmer 0.95s cubic-bezier(.7,.15,.8,.79);
   }
-}
-@layer utilities {
-  .glass-morphism {
-    @apply backdrop-blur-xl bg-white/10 border border-white/20 rounded-xl shadow-[0_6px_32px_-10px_rgba(120,135,255,0.23),0_1.5px_12px_0_rgba(19,44,87,0.11)] transition-all;
-  }
-  .starlit-glow {
-    @apply shadow-[0_0_12px_0px_#a1cafb88,0_0_32px_0px_#fff3,0_1px_7px_0px_#404f70];
-  }
-  .glass-bg {
-    @apply bg-white/5 backdrop-blur-md;
-  } 
 }

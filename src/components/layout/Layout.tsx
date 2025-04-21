@@ -1,5 +1,5 @@
 
-import { ReactNode, useState } from "react";
+import React, { ReactNode, useState } from "react";
 import { Navbar } from "./Navbar";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import NightSky from "@/components/layout/NightSky";
