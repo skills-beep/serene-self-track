@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -102,7 +103,7 @@
   }
 
   .dark .night-bg {
-    @apply bg-gradient-to-b from-wellness-night-dark to-wellness-night-DEFAULT relative overflow-hidden;
+    @apply bg-gradient-to-b from-wellness-night-dark to-wellness-night-purple relative overflow-hidden;
   }
 
   .star {
