@@ -44,7 +44,7 @@ Welcome to **Wellness Tracker**, a beautifully crafted web app designed to help 
 
 - **Frontend:** HTML, CSS, JavaScript
 - **Design System:** Tailwind CSS (with glassmorphism effects)
-- **Framework (Optional):** React (if applicable)
+- **Framework (Optional):** React 
 - **Animation:** CSS keyframes / JavaScript + SVG (for star effects)
 - **Data Storage:** LocalStorage (for mock persistence)
 
